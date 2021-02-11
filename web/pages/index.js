@@ -100,7 +100,7 @@ function Home({broks}) {
 }
 
 export async function getServerSideProps() {
-    let brok = fetchAPI("broks?_limit=");
+    let brok = fetchAPI("broks?_limit=20&_sort=created_at:desc");
     return {props: {broks: await brok}}
 }
 
