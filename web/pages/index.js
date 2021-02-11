@@ -34,6 +34,14 @@ function Home({broks}) {
                 </Col>
             </Row>
 
+            <Row>
+                <Col md={{span:8,offset:2}}>
+                    <i>
+                        Her kan du komme af med dine frustrationer over sundhedsvæsenet. Måske bliver der gjort noget ved det - måske gør der ikke?. Men du kom i det mindste af med det 😊
+                    </i>
+                </Col>
+            </Row>
+
         </Container>
         <Container >
             <Jumbotron>
