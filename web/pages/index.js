@@ -81,7 +81,7 @@ function Home({broks}) {
                             <Form>
                                 <FormGroup>
                                     <Form.Label>Dit input</Form.Label>
-                                    <Form.Control as={"textarea"} placeholder="Skiv dit input her"
+                                    <Form.Control as={"textarea"} placeholder="Skriv dit input her"
                                                   onChange={handleChange} onBlur={handleBlur} value={values.text}
                                                   name={"text"}
                                     />
