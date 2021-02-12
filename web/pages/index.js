@@ -18,6 +18,11 @@ function Home({broks}) {
     return (<>
         <Container>
             <Row>
+                <Col md={{span: 6, offset:3}} style={{textAlign:"center", marginTop:-50, marginBottom:-50}}>
+                <img align={"center"} src={"/sundhedsbrok.png"} alt={"Sundhedsbrok"}/>
+                </Col>
+            </Row>
+            <Row>
                 <Col md={{span:4,offset:4}}>
                     <h5 align={"center"}>
                         <i>
@@ -108,8 +113,12 @@ function Home({broks}) {
 }
 
 export async function getServerSideProps() {
-    let brok = fetchAPI("broks?_limit=20&_sort=created_at:desc");
-    return {props: {broks: await brok}}
+    try {
+        let brok = fetchAPI("broks?_limit=20&_sort=created_at:desc");
+        return {props: {broks: await brok}}
+    } catch (e) {
+        return {props:{broks:[]}}
+    }
 }
 
 export default Home;
