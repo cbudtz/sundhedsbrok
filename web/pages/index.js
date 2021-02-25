@@ -1,4 +1,4 @@
-import {Button, Carousel, Col, Container, Form, FormGroup, Row} from "react-bootstrap";
+import {Button, Carousel, Col, Container, Form, FormGroup, Row, Navbar} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css"
 import React from "react";
 import Jumbotron from "../components/jumbotron";
@@ -95,7 +95,7 @@ function Home({broks}) {
 
                 </Carousel>
             </Jumbotron>
-            <Container>
+            <Container style={{marginBottom:140}}>
                 <Row>
                     <Col md={{span: 6, offset:3}}>
                         <Formik
@@ -140,6 +140,7 @@ function Home({broks}) {
                 </Row>
             </Container>
         </Container>
+        <Navbar style={{backgroundColor: "#F7F7F7"}} fixed={"bottom"}>We bruger ingen cookies. Hvis du ikke vil have dit rigtige navn offentliggjort - så lad være med at skrive det! Trykker du på brok-knappen accepterer du at vi offentliggør dit brok og at vi kan bruge det som vi har lyst til.</Navbar>
     </>)
 }
 
