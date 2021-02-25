@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Blockquote({children,citation}) {
+export default function Blockquote({children,citation, likes,doLike}) {
     const style = {
-        borderLeft:"5px solid grey",
+        // borderLeft:"5px solid grey",
         padding:5
     }
     const citationstyle = {
@@ -16,6 +16,7 @@ export default function Blockquote({children,citation}) {
             <div style={citationstyle} >
                 - {citation? citation : "Anonymous"}
             </div>
+
         </div>
     )
 }

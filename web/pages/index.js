@@ -16,6 +16,13 @@ function Home({broks}) {
     const slideStyle = {margin:"15%", color:"white"};
 
     const router =  useRouter();
+
+    const doLike = (brokId) => {
+        postAPI("broks/" + brokId + "/inc").then((data)=>
+            router.replace(router.asPath)
+        )
+    }
+
     return (<>
         <Head>
             <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"/>
@@ -78,6 +85,9 @@ function Home({broks}) {
                                     <Blockquote citation={brok.name}>
                                         {brok.text}
                                     </Blockquote>
+                                    <div>
+                                        <span style={{fontSize:"150%",cursor:"pointer"}} onClick={()=>doLike(brok.id)}>👍</span>{brok.likes}
+                                    </div>
                                 </div>
                             </Carousel.Item>
                     ))}
